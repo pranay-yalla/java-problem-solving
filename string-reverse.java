@@ -5,8 +5,9 @@ public class Main {
 		String  text=sc.nextLine();
 		String  rev=reverse(text);
 		System.out.println(rev);
-		String  revwithsb=reversewithsb(text);
-		System.out.println(revwithsb);
+		String  rev_with_sb=reverse_with_sb(text);
+		System.out.println(rev_with_sb);
+		sc.close() ;
 	}
 	public static String reverse(String text){
 		char[] a=text.toCharArray();
@@ -18,7 +19,7 @@ public class Main {
 		}
 		return new String(a);
 	}
-	public static String reversewithsb(String text){
+	public static String reverse_with_sb(String text){
 		StringBuilder sb=new StringBuilder();
 		//sb.reverse(); direct method to.reverse
 		for(int i=text.length()-1;i>=0;i--)
@@ -26,5 +27,6 @@ public class Main {
 			sb.append(text.charAt(i));
 		}
 		return sb.toString();
+		
 	}  
 }
