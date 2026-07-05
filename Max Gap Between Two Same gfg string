@@ -1,0 +1,18 @@
+class Solution {
+    public int maxCharGap(String s) {
+        // code here
+        int c=0, max=-1;
+        
+        for(int i=0;i<s.length() ;i++) {
+            char ch=s.charAt(i);
+            if(s.lastIndexOf(ch) ==-1 || s.indexOf(ch) ==-1) 
+            continue;
+            c=s.lastIndexOf(ch)-1-s.indexOf(ch) ;
+            max=Math.max(c, max) ;
+            
+            
+        }
+                return max;
+        //return -1;
+    }
+};
